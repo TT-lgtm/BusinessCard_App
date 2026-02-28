@@ -36,7 +36,8 @@ class MainActivity : ComponentActivity(){
             BusinessCardAppTheme{
                 Surface (modifier = Modifier.fillMaxSize(), color = MaterialTheme.colorScheme.background)
                 {
-                    BusinessCard()
+                    BasicInformation()
+                    ContactInformation()
                 }
             }
         }
@@ -44,7 +45,7 @@ class MainActivity : ComponentActivity(){
 }
 
 @Composable
-fun BusinessCard(){
+fun BasicInformation(){
     Column(
         modifier = Modifier
             .fillMaxSize()
@@ -80,6 +81,10 @@ fun BusinessCard(){
         )
         Spacer(modifier = Modifier.padding(top = 300.dp))
     }
+}
+
+@Composable
+fun ContactInformation(){
     Column(
         modifier = Modifier
             .fillMaxSize()
@@ -139,6 +144,7 @@ fun BusinessCard(){
 @Composable
 fun BusinessCardPreview(){
     BusinessCardAppTheme {
-        BusinessCard()
+        BasicInformation()
+        ContactInformation()
     }
 }
