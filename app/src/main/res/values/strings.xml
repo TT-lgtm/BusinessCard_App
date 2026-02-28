@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">BusinessCardApp</string>
+    <string name="phone_icon">Phone Icon</string>
+    <string name="telegram_icon">Telegram Icon</string>
+    <string name="email_icon">Email Icon</string>
+    <string name="email">email@gmail.com</string>
+    <string name="name_telegram">\@telegram</string>
+    <string name="phone_number">+7 (987) 654-32-10</string>
+    <string name="title_text">Разработчики мобильных приложений</string>
+    <string name="full_name">Олег и Валерия</string>
+    <string name="icon_avatar">Icon Avatar</string>
 </resources>
