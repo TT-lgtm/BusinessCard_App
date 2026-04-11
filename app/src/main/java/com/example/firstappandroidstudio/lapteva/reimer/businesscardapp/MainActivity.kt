@@ -5,7 +5,14 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.Image
-import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
@@ -13,6 +20,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
@@ -60,7 +68,7 @@ fun BasicInformation() {
         verticalArrangement = Arrangement.Center,
         modifier = Modifier.fillMaxWidth()
     ) {
-        Spacer(modifier = Modifier.padding(top = 280.dp))
+        Spacer(modifier = Modifier.padding(top = 240.dp))
         Image(
             painter = painterResource(id = R.drawable.icon_avatar),
             contentDescription = stringResource(R.string.icon_avatar),
@@ -73,7 +81,7 @@ fun BasicInformation() {
             text = stringResource(R.string.full_name),
             fontSize = 24.sp,
             fontWeight = FontWeight.Bold,
-            color = Color(0xFF018786),
+            color = colorResource(R.color.teal),
             textAlign = TextAlign.Center,
             modifier = Modifier.padding(bottom = 8.dp)
         )
@@ -125,8 +133,8 @@ fun ContactRow(
 ) {
     Row(
         verticalAlignment = Alignment.CenterVertically,
-        horizontalArrangement = Arrangement.Center,
-        modifier = Modifier.fillMaxWidth()
+        horizontalArrangement = Arrangement.Start,
+        modifier = Modifier.fillMaxWidth().padding(start = 90.dp)
     ) {
         Image(
             painter = painterResource(id = icon),
@@ -151,44 +159,3 @@ fun BusinessCardPreview() {
         BusinessCard()
     }
 }
-
-
-/*Composable
-fun BasicInformation(){
-    Column(
-        modifier = Modifier
-            .fillMaxSize()
-            .padding(16.dp),
-        horizontalAlignment = Alignment.CenterHorizontally,
-        verticalArrangement = Arrangement.Center
-    ) {
-        Spacer(modifier = Modifier.padding(top = 200.dp))
-        Image(
-            painter = painterResource(id = R.drawable.icon_avatar),
-            contentDescription = stringResource(R.string.icon_avatar),
-            modifier = Modifier
-                .size(150.dp)
-                .padding(bottom = 16.dp)
-        )
-        Text(
-            text = stringResource(R.string.full_name),
-            fontSize = 24.sp,
-            fontWeight = FontWeight.Bold,
-            color = Color(0xFF018786),
-            textAlign = TextAlign.Center,
-            modifier = Modifier
-                .padding(bottom = 8.dp)
-        )
-        Text(
-            text = stringResource(R.string.title_text),
-            fontSize = 18.sp,
-            fontWeight = FontWeight.Normal,
-            color = Color.Blue,
-            textAlign = TextAlign.Justify,
-            modifier = Modifier
-                .padding(bottom = 8.dp)
-        )
-        Spacer(modifier = Modifier.padding(top = 300.dp))
-    }
-}*/
-
